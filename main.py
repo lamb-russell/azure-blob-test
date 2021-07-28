@@ -1,3 +1,14 @@
+"""
+This code creates a file in the data directory with a unique name (uuid function), writes text to the file,
+uploads that file to a blob, then downloads it with a new name.  Credentials for the blob are stored in ann enviroment
+variable AZURE_STORAGE_CONNECTION_STRING.  files are created and downloaded to the data folder in the root directory
+
+The initial template of this code was based on example code provided by Microsoft.
+
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python
+
+"""
+
 import os, uuid
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient, __version__
 
